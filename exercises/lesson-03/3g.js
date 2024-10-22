@@ -1,0 +1,2 @@
+// You order 1 coffee ($5.99) and 1 burger ($2.95). Using math, calculate the total cost, and using concatenation, create the text: 'Total cost: $' (calculate in cents to avoid inaccuracies)
+"Total cost: $" + (599 + 295) / 100;
