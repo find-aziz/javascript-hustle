@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9c</title>
+</head>
+<body>
+    <button onclick="updateDisplay('heads');">heads</button>
+    <button onclick="updateDisplay('tails');">tails</button>
+    <p class="js-display-p"></p>
+    <script>
+       function updateDisplay(button){
+        document.querySelector('.js-display-p').innerHTML = `You Choose: ${button}`;
+       }
+    </script>
+</body>
+</html>

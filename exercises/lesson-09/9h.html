@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 9h</title>
+  </head>
+  <body>
+    <input
+      class="js-input"
+      placeholder="Type Something"
+      onkeyup="handlekeyup();"
+    />
+    <p class="js-display-p"></p>
+    <script>
+      function handlekeyup() {
+        let displayElement = document.querySelector(".js-display-p");
+        let inputElement = document.querySelector(".js-input");
+        displayElement.innerHTML = inputElement.value;
+      }
+    </script>
+  </body>
+</html>
