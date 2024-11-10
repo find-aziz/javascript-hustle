@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 11n</title>
+  </head>
+  <body>
+    <script>
+      const fruits = ["apple", "grape", "pine apple", "apple", "apple"];
+      countWords(fruits);
+      function countWords(words) {
+        let result = {};
+        for (let index = 0; index < words.length; index++) {
+          const word = words[index];
+          if (!result[word]) {
+            result[word] = 1;
+          } else {
+            result[word]++;
+          }
+        }
+        return console.log(result);
+      }
+    </script>
+  </body>
+</html>

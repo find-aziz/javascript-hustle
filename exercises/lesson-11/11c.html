@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 11c</title>
+  </head>
+  <body>
+    <script>
+      let myArray1 = [1, 20, 22, 24, 5];
+      let myArray2 = ["hi", "hello", "good"];
+      arraySwap(myArray1);
+      arraySwap(myArray2);
+      function arraySwap(array) {
+        zeroIndex = array[0];
+        array[0] = array[array.length - 1];
+        array[array.length - 1] = zeroIndex;
+        console.log(array);
+      }
+    </script>
+  </body>
+</html>
