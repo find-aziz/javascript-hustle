@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 11k</title>
+  </head>
+  <body>
+    <script>
+      countPositive([1, -3, 5]);
+      countPositive([-2, 3, -5, 7, 10]);
+      function countPositive(nums) {
+        let result = 0;
+        for (i = 0; i < nums.length; i++) {
+          if (nums[i] > 0) {
+            result++;
+          }
+        }
+        return console.log(result);
+      }
+    </script>
+  </body>
+</html>
