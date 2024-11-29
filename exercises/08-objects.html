@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+    <style>
+      .products {
+        background-color: blue;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Object syntax is close to css syntax, in addition it has '=' before curly braces ',' after each property-value pair and ';' to terminate the whole scope.
+      const product = {
+        name: "socks",
+        price: 1090,
+      };
+      console.log(typeof product);
+
+      console.log(product.name);
+      console.log(product.price);
+      //   updating the property value using dot notation
+      product.name = "cotton socks";
+      console.log(product.name);
+      // Adding new property that doesn't exits
+      product.newProperty = true;
+      console.log(product);
+      // deleting property from object
+      delete product.newProperty;
+      console.log(product);
+      // Objects make our code more organize by reducing bunch of variables
+      // groups and use multiple values together
+     
+      // More details about objects
+      const product2 = {
+        name: "shirt",
+        "delivery-time": "1 day",
+        // nested object
+        ratings: {
+          stars: 4.5,
+          counts: 87,
+        },
+        fun: function function1() {
+          console.log("function inside the object");
+        },
+      };
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2["name"]);
+      // Bracket Notation let us use properties that don't work with dot notation
+      // console.log(product2.delivery - time);
+      console.log(product2["delivery-time"]);
+      // Bracket Notation not only let us use string but also the variable e.g: product2[variable], and calculation e.g: product2['delivery'+'time'] or anything that result into value.
+      // accessing nested value
+      console.log(product2.ratings.counts);
+      product2.fun();
+      // Function inside object is called method
+      // this are built in objects
+      console.log(typeof console);
+      console.log(typeof Math);
+      // this are built in methods
+      console.log(typeof console.log);
+      console.log(typeof Math.round, typeof Math.random);
+      // two more built in objects JSON and localstorage
+      console.log(typeof JSON);
+      console.log(typeof localStorage);
+      // Built in object JSON
+      // JS OBJECT TO JSON
+      const jsonString = JSON.stringify(product2);
+      console.log(jsonString);
+      // JSON TO JS OBJECT
+      console.log(JSON.parse(jsonString));
+      // Built in object localStorage
+      // method to save inside localStorage
+      localStorage.setItem("storageName", "storageValue");
+      console.log(localStorage.getItem("storageName"));
+    
+      // auto boxing
+      console.log("hello".length);
+      console.log("hello".toUpperCase());
+      // Objects are just references of the real data store at computer location (copy by reference)
+      const object1 = {
+        message: "hello",
+      };
+      const object2 = object1;
+      object1.message = "Good job";
+      console.log(object1);
+      console.log(object2);
+      // can't compare between two objects
+      const object3 = {
+        message: "Good job",
+      };
+      console.log(object1 === object3);
+      console.log(object1 === object2);
+      // shortcut for object
+      const object4 = {
+        message: "Good job",
+        price: 799,
+      };
+      // destructuring
+      // const message = object4.message;
+      const { message, price } = object4;
+      console.log(message);
+      console.log(price);
+      console.log(`message: ${message} price: ${price}`);
+      // Shorthand property
+      const object5 = {
+        message,
+        method() {
+          //shorthand for creating method.
+          console.log("shorthand method");
+        },
+      };
+      object5.method();
+    </script>
+  </body>
+</html>

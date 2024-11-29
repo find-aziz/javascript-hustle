@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booleans</title>
+  </head>
+  <body>
+    <script>
+      true;
+      false;
+      console.log(typeof true);
+      console.log(typeof "false");
+      console.log(3 > 5 - 5); // comparision operators has less precedence over the math operators
+      console.log(5 == "5.00"); // never use == or !=
+      console.log(5 != "5.00"); // never use == or !=
+      console.log(5 === "5.00"); // always use === or !== for accurate comparision
+      console.log(5 !== "5.00"); // always use === or !== for accurate comparision
+      if (false) {
+        console.log("the condition is true");
+      } else {
+        console.log("the condition is false");
+      }
+      // we can put any code "that results into booleans" in if statement's condition.
+      const age = 15;
+      if (age >= 18) {
+        console.log("You can drive");
+      } else if (age >= 18) {
+        console.log("You are almost There!");
+      } else {
+        console.log("You can not drive");
+      }
+      // Logical Operators AND
+      console.log(true && true); //if both value true then result is true
+      console.log(true && false); // if one of the value is false then result is false
+      console.log(0.2 >= 0 && 0.2 < 1 / 3); // Logical operators has less precedence over the math operators and comparision operators.
+      // Logical Operator OR
+      console.log(true || false); // at least one value should be true then result is true.
+      console.log(true || true); // if both value are true then the result is still true.
+      // Logical Operator NOT
+      console.log(!true); // Not true means false and visa versa
+    </script>
+  </body>
+</html>
