@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced functions</title>
+  </head>
+  <body>
+    <!-- <script>
+      // Normal Function
+      greetings();
+      // this function comes with hoisting means we can use it before the declaration.
+      function greetings() {
+        console.log("Hello");
+      }
+      //   function call
+      greetings();
+      // There is another syntax for creating a function that is called a Function Expression.
+      // Functions are special kind of value.
+      // There is another syntax for creating a function that is called a Function Expression. It allows us to create a new function in the middle of any expression.
+      // We can save a function inside a variable.
+      const function1 = function () {
+        // this is called an anonymous function.
+        console.log("hello again");
+      }; //note: semi colon at the end because we are using variable.
+      console.log(function1);
+      console.log(typeof function1);
+      function1();
+      //   we can save a function inside the object
+      const object1 = {
+        num: 2,
+        fun: function () {
+          console.log("Function save inside an Object is called method");
+        },
+      };
+      object1.fun();
+      // passing a value inside a function using params.
+      function display(params) {
+        console.log(params);
+      }
+      display(2);
+      //   Since functions are also value we can also pass function as a parameter.
+      function run(param) {
+        param();
+      }
+      run(function () {
+        console.log("keep running");
+      }); // This is call passing a function into another function which are called as callback functions.
+    </script> -->
+    <script>
+      // setTimeout() allow us to run a function in the future.
+      setTimeout(function () {
+        console.log("Timeout");
+        //code inside this function is synchornous
+        console.log("Timeout again");
+      }, 3000); // after 3 sec the function will be called.
+      // setTimeout take two params first is function and second how long to wait before running this function.
+      console.log("next line");
+      //   when setTimeout() is called it sets a timer and goes to the next line rather wait for the timer to complete
+      // this is called asynchornous code = computer won't wait for a line to finish before going on to the next line
+      // synchornous code = computer will wait for a line to finish before going on to the next line
+      // Advantages of Asynchornous is that it does not block code for 3 seconds.
+      // setInterval() allow us to keep running a function in the future again and again after at specific intervals.
+      setInterval(function () {
+        console.log("Interval");
+      }, 3000);
+      console.log("another next line");
+    </script>
+  </body>
+</html>
