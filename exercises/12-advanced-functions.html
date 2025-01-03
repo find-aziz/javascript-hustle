@@ -71,7 +71,17 @@
       ["make dinner", "wash dinner", "do cleaning", "watch youtube"].forEach(
         function (value, index) {
           console.log(value);
-          console.log(index)
+          console.log(index);
+        }
+      );
+      // Continue statement inside forEach using return keyword
+      ["make dinner", "wash dinner", "do cleaning", "watch youtube"].forEach(
+        function (value, index) {
+          if (value === "wash dinner") {
+            return;
+          }
+          console.log(value);
+          console.log(index);
         }
       );
     </script>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson 12e</title>
+  </head>
+  <body>
+    <button class="js-button" onclick="changeOnclick()">Add to cart</button>
+    <p class="js-paragraph"></p>
+    <script>
+      function changeOnclick() {
+        const buttonElement = document.querySelector(".js-paragraph");
+        buttonElement.innerHTML = "Added";
+        setTimeout(function () {
+          buttonElement.innerHTML = "";
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>

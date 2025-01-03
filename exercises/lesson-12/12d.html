@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson 12d</title>
+  </head>
+  <body>
+    <button class="js-button" onclick="changeOnclick()">Start</button>
+    <script>
+      function changeOnclick() {
+        const buttonElement = document.querySelector(".js-button");
+        buttonElement.innerHTML = "Loading...";
+        setTimeout(function () {
+          buttonElement.innerHTML = "Finshed";
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
