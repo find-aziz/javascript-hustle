@@ -6,6 +6,24 @@
     <title>Advanced functions</title>
   </head>
   <body>
+    <button class="js-button">Click</button>
+    <script>
+      const buttonElement = document.querySelector(".js-button");
+      // Every html element has a method called Event Listener.
+      // .addEventListerner() let us run some code when we intereact with the element.
+      // has two parameters 1. event 2. A function we want to run.
+      // 1. Let us have multiple eventListener for an event
+      // 2. we can remove and eventListener using a method called .removeEventListener();
+      const eventListener = () => {
+        console.log("Clicked");
+      };
+      buttonElement.addEventListener("click", eventListener);
+      buttonElement.removeEventListener('click',eventListener);
+      buttonElement.addEventListener("click", () => {
+        console.log("Clicked 2");
+      });
+      // Best Practice use eventListerner instead of onclick attribute.
+    </script>
     <script>
       // Normal Function
       greetings();
@@ -84,6 +102,59 @@
           console.log(index);
         }
       );
+    </script>
+    <script>
+      // Arrow Function: concise syntax for creating functions, that’s often better than Function Expressions.
+      const regularExpFunction = function (param1, param2) {
+        console.log("regular expression function");
+        return 5;
+      };
+      const arrowFunction = (param1, param2) => {
+        console.log("Hello");
+        return 5;
+      };
+      arrowFunction();
+      // ShortCuts of Arrow functions different from regular functions
+      const oneParam = (param) => {
+        console.log(param + 1);
+      };
+      const oneLine = () => 2 + 3;
+      // Practice using arrow functions
+      ["make dinner", "wash dinner", "do cleaning", "watch youtube"].forEach(
+        (value, index) => {
+          console.log(value);
+          console.log(index);
+        }
+      );
+      // When passing a function into another function it is recommended to use arrow function.
+      // another place where we could use arrow function which is inside an object.
+      const object2 = {
+        method: () => {}, // using arrow functions
+        method() {},//even shorter syntax for creating method : shorthand method
+      };
+    </script>
+    <script>
+      //More array method .filter() and .map()
+      console.log(
+        [1, -3, 5].filter((value, index) => {
+          /*
+          if (value >= 0) {
+            return true;
+          } else {
+            return false;
+          }
+            */
+          return value >= 0;
+        })
+      );
+      console.log(
+        [1, 1, 3].map((value, index) => {
+          return value * 2;
+        })
+      );
+      console.log([1, 1, 3].map((value) => value * 2));
+      // Feature of function clousure.
+      // if a function has access to a value, it will always have access to that value
     </script>
   </body>
 </html>
