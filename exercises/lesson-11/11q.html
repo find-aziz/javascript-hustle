@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson 11q</title>
+  </head>
+  <body>
+    <script>
+      function findIndex(array, words) {
+        for (let i = 0; i < array.length; i++) {
+          if (words === array[i]) {
+            return i;
+          }
+        }
+        return console.log(-1);
+      }
+      findIndex(["hello", "world", "search", "good","search"],"search");
+      findIndex(["green", "red", "blue", "red"],"red");
+      findIndex(["green", "red", "blue", "red"],"yellow");
+    </script>
+  </body>
+</html>

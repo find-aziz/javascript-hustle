@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 11h</title>
+  </head>
+  <body>
+    <script>
+      const numArray = [1, 2, 3];
+
+      addOne(numArray);
+      addOne([-2, -1, 0, 99]);
+      addOne([6, 5, 2010]);
+      addOne([25, 10, 2010]);
+
+      function addOne(array) {
+        const result = [];
+        for (let index = 0; index < array.length; index++) {
+          result.push(array[index] + 1);
+        }
+        return console.log(result);
+      }
+    </script>
+  </body>
+</html>

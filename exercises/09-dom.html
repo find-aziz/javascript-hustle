@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dom</title>
+  </head>
+  <body>
+    <button>hello</button>
+    <button class="js-button">second button</button>
+    <script>
+      // method is function that is saved inside the object
+      console.log(document.querySelector("button").innerHTML);
+      const buttonElement = document.querySelector(".js-button").innerHTML;
+      console.log(buttonElement);
+      /*
+      console.log(document.title);
+      document.title = "changed";
+      console.log(document.title);
+      document.body.innerHTML = '<button>nope</button>';
+      /*
+      document.body.innerHTML = "changed";
+      document.title = "title";
+      */
+    </script>
+  </body>
+</html>

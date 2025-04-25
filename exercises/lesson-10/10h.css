@@ -1,0 +1,19 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cost-input {
+  font-size: 15px;
+  padding: 10px;
+}
+.calculate-button {
+  border: none;
+  padding: 12px 15px;
+  background-color: green;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+.warning {
+  color: red;
+}

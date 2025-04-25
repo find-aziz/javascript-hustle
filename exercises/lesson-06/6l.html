@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 6l</title>
+  </head>
+  <body>
+    <!-- My Version of this task -->
+    <!-- Already use shortcuts -- and -= += -->
+    <h1>Cart Quantity</h1>
+    <button onclick=" console.log(`Cart Quantity: ${cart}`)">
+      Show Quantity
+    </button>
+    <button
+      onclick="(cart + 1 > 10) ? alert(`Cart is full don't update the quantiy`) : cart ++; console.log(`Cart Quantity: ${cart}`);"
+    >
+      Add to cart
+    </button>
+    <button
+      onclick="(cart + 2 > 10) ? alert(`Cart is almost full can't update the quantiy to 2`) : cart += 2; console.log(`Cart Quantity: ${cart}`);"
+    >
+      +2
+    </button>
+    <button
+      onclick="(cart + 3 > 10) ? alert(`Cart is almost full can't update the quantiy to 3`) : cart += 3; console.log(`Cart Quantity: ${cart}`);"
+    >
+      +3
+    </button>
+    <button
+      onclick="(cart + 4 > 10) ? alert(`Cart is almost full can't update the quantiy to 4`) : cart += 4; console.log(`Cart Quantity: ${cart}`);"
+    >
+      +4
+    </button>
+    <button
+      onclick="(cart + 5 > 10) ? alert(`Cart is full don't update the quantiy`) : cart += 5; console.log(`Cart Quantity: ${cart}`);"
+    >
+      +5
+    </button>
+    <button
+      onclick="(cart - 1 < 0) ? alert(`Cart is already empty`) :  cart --; console.log(`Cart Quantity: ${cart}`);"
+    >
+      Remove from cart
+    </button>
+    <button
+      onclick="(cart - 2 < 0) ? alert(`Not enough items to remove`) :  cart -=2; console.log(`Cart Quantity: ${cart}`);"
+    >
+      -2
+    </button>
+    <button
+      onclick="(cart - 3 < 0) ? alert(`Not enough items to remove`) :  cart -=3; console.log(`Cart Quantity: ${cart}`);"
+    >
+      -3
+    </button>
+    <button
+      onclick="cart = 0; console.log(`Cart was reset. \nCart Quantity: ${cart}`)"
+    >
+      Reset Cart
+    </button>
+    <p>open console to see or press shortcut"ctrl + J"</p>
+    <script>
+      let cart = 0;
+      /*
+      if(cart > 10){
+        alert(`Cart is full don't update the quantiy`)
+      } else{
+        cart ++; console.log(`Cart Quantity: ${cart}`)
+      }
+      */
+      /*
+     if(cart === 0){
+        alert(`Not enough Items in the cart`)
+     }
+     else{
+        cart --; console.log(`Cart Quantity: ${cart}`)
+     }
+     */
+    </script>
+  </body>
+</html>

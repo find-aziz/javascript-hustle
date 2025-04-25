@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays and Loops</title>
+  </head>
+  <body>
+    
+    <script>
+      const myArray = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+      console.log(typeof myArray);
+      console.log(myArray);
+
+      //   updating array element by index
+      myArray[0] = 500;
+      console.log(`Here we update the index 0`, myArray);
+
+      //   removing element at end(Last)
+      myArray.pop();
+      console.log(`Here we remove using pop`, myArray);
+
+      //   removing element at start(Begining)
+      myArray.shift();
+      console.log(`Here we remove using shift`, myArray);
+
+      //   Adding element at end(Last)
+      myArray.push("Last");
+      console.log(`Here we use push to insert`, myArray);
+
+      //   Adding element at start(Begining)
+      myArray.unshift("Begining");
+      console.log(`Here we use unshift to insert`, myArray);
+
+      //   Accessing value using index
+      console.log(myArray[5]);
+
+      //   inside an array we can put any type of value
+      [1, "hello", true, { name: "socks" }, [1, 2]];
+      console.log(Array.isArray([1]));
+
+      //   Arrays are objects and also have properties
+      console.log(myArray.length);
+
+      // .push() adds a value to the end of an array
+      myArray.push(25);
+      console.log(myArray);
+      //   .splice() removes a value from an array and splice() takes two arguments.
+      // 1. index we want to remove.
+      // 2. Number of values we want to remove.
+      const myNewArray = myArray.splice(1, 3);
+      console.log(myNewArray);
+      console.log(myArray);
+      // another slice() used to access element via range take two argument start and end number and it does not remove orginal array
+      console.log(myArray.slice(1, 3));
+
+    </script>
+    
+    
+    <script>
+      // Loops (lets us run some code over and over)
+      let i = 1; // variable to initialize loop(Loop variable)
+      while (i <= 5) {
+        // while is just like 'if' checking condition if true then the code inside scope exists
+        // difference between if and loop is loop runs again and again
+        console.log(i);
+        i++; // increment the variable to continue the loop till desire result.
+      }
+      // for loop takes three arguments/statements
+      // 1. loop variable and end with a ';'
+      // 2. loop condition and end with a ';'
+      // 3. increment step.
+      for (let i = 1; i <= 5; i++) {
+        console.log(i);
+      }
+
+      // example of non standard loop
+      let randomNumber = 0;
+      while (randomNumber < 0.5) {
+        randomNumber = Math.random();
+      }
+      console.log(randomNumber);
+    </script>
+    
+        
+    <script>
+      // New technique Looping through an array
+      const todoList = ["make dinner", "do dishes", "clean bathroom"];
+      for (let i = 0; i < todoList.length; i++) {
+        const element = todoList[i];
+        console.log(element);
+      }
+    </script>
+    
+        
+    <script>
+      // Accumulator Pattern with looping through an array
+      const numbs = [1, 1, 3];
+      let total = 0; // accumulator variable
+      for (let i = 0; i < numbs.length; i++) {
+        const element = numbs[i];
+        total += element; // updating the variable
+      }
+      console.log(total);
+      // 1. Create a variable to store the result.
+      // 2. Loop through the array and update the result.
+      const doubleNumber = [];
+      for (let i = 0; i < numbs.length; i++) {
+        const element = numbs[i];
+        const double = element * 2;
+        doubleNumber.push(double);
+      }
+      console.log(doubleNumber);
+    </script>
+  
+    <script>
+      // Arrays are reference in javaScript
+      const array1 = [1, 3, 2]; // this variable array1 doesn't hold any value.
+      const array2 = array1; // this doesn't contain copy of value rather contains copy of reference.
+      // Both the array variables are now pointing to the same value store in the computer memory.
+      array2.push(4);
+      console.log(array1, array2); // both the variable reference the same value.
+      // To avoid such behaviour we use .slice method to copy array
+      const arrayOne = [9, 8, 7];
+      const arrayTwo = arrayOne.slice();
+      arrayOne.push(2);
+      console.log(arrayOne, arrayTwo); // now both referencing different values.
+      // Destructuring array (get values out of the array and store in variable but in short way)
+      const newArray = [1, 2, 3, 4, 5];
+      const [firstValue, secondValue, thirdValue] = newArray;
+      console.log(firstValue);
+    </script>
+
+    <script>
+      // More about Loops controling (Jump statements)
+      // break = exit a loop early
+
+      for (let i = 0; i <= 10; i++) {
+        console.log(i);
+        if (i == 8) {
+          break;
+        }
+      }
+      // continue = skip 1 iteration of loop
+      for (let i = 0; i <= 10; i++) {
+        if (i == 3) {
+          continue;
+          // every code below continue statement will be skip and continue the next iteration.
+        }
+        console.log(i);
+      }
+      // problem with while loop
+      let j = 0;
+      while (j <= 10) {
+        if (j == 3) {
+          j++; // we need to iterate the loop here if not infinity loop will be created.
+          continue;
+          // every code below continue statement will be skip and continue the next iteration.
+        }
+        console.log(i);
+        j++;
+      }
+      // calculating remainder using % operator 7 % 3 => 1.
+      for (let i = 0; i <= 10; i++) {
+        if (i % 2 == 0) {
+          continue;
+          // every code below continue statement will be skip and continue the next iteration.
+        }
+        console.log(i);
+      }
+    </script>
+  </body>
+</html>

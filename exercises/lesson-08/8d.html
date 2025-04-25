@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 8d</title>
+  </head>
+  <body>
+    <script>
+      const product1 = {
+        name: "basketball",
+        price: 2595,
+      };
+      const product2 = {
+        name: "shirts",
+        price: 1950,
+      };
+
+      function comparePrice(product1, product2) {
+        console.log(product1);
+        console.log(product2);
+        if (product1.price < product2.price) {
+          return console.log(`${product1.name} is less expensive`);
+        }
+        if (product2.price < product1.price) {
+          return console.log(`${product2.name} is less expensive`);
+        }
+      }
+      console.log(comparePrice(product1, product2));
+    </script>
+  </body>
+</html>

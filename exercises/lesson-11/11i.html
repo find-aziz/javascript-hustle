@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 11i</title>
+  </head>
+  <body>
+    <script>
+      addnum([1, 2, 3, 4, 5], 5);
+      addnum([1, 2, 3], 2);
+      addnum([1, 2, 3], 3);
+      addnum([-2, -1, 0, 99], 2);
+      function addnum(array, num) {
+        const result = [];
+        for (index = 0; index < array.length; index++) {
+          result.push(array[index] + num);
+        }
+        return console.log(result);
+      }
+    </script>
+  </body>
+</html>
